@@ -1,0 +1,82 @@
+/* Base Styling */
+        body {
+            font-family: 'Arial', sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #f0f4f8; /* Light background */
+        }
+
+        /* Calculator Container Styling */
+        #calculator-container {
+            width: 90%;
+            max-width: 400px;
+            padding: 30px;
+            background-color: #ffffff;
+            border-radius: 12px; /* Rounded corners */
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+            display: grid;
+            gap: 15px;
+            grid-template-columns: 1fr 1fr; /* Two columns for inputs */
+        }
+
+        /* Input Fields */
+        input[type="number"] {
+            padding: 12px;
+            border: 1px solid #cceeff; /* Light blue border */
+            border-radius: 6px;
+            font-size: 18px;
+            width: 100%;
+            box-sizing: border-box; /* Include padding in width */
+            transition: border-color 0.2s;
+            grid-column: span 1;
+        }
+
+        input[type="number"]:focus {
+            border-color: #007bff;
+            outline: none;
+        }
+
+        /* Operation Buttons */
+        button {
+            padding: 15px 0;
+            font-size: 20px;
+            font-weight: bold;
+            cursor: pointer;
+            border: none;
+            border-radius: 6px;
+            color: white;
+            transition: background-color 0.2s, transform 0.1s;
+        }
+
+        /* Specific Button Colors */
+        #add { background-color: #28a745; } /* Green */
+        #subtract { background-color: #ffc107; color: #333; } /* Yellow */
+        #multiply { background-color: #007bff; } /* Blue */
+        #divide { background-color: #dc3545; } /* Red */
+
+        button:hover {
+            transform: translateY(-2px);
+            opacity: 0.9;
+        }
+
+        /* Result Display */
+        #result {
+            grid-column: span 2; /* Spans across both columns */
+            margin-top: 15px;
+            padding: 15px;
+            font-size: 22px;
+            font-weight: 500;
+            background-color: #e9ecef;
+            border-radius: 6px;
+            text-align: left;
+        }
+
+        #calculation-result {
+            font-weight: bold;
+            color: #007bff;
+            margin-left: 5px;
+        }
+        
